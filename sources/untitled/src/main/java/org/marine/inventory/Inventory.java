@@ -8,6 +8,8 @@ public class Inventory {
     public Inventory() {dictionnary = new HashMap<String,Integer>();}
 
 
+    public int getElem(String elem){return dictionnary.get(elem);}
+
     public void put(String elem, int nb){
         dictionnary.put(elem, nb);
     }
