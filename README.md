@@ -1,6 +1,6 @@
 # glp_42
 
-##Projet Marine
+## Projet Marine
 
 Jack-Arthur Zue 
 Kenan Ammad
