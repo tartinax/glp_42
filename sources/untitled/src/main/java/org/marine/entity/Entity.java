@@ -16,6 +16,8 @@ public class Entity {
     private static int MAX_HEALTH_POINT;
     private  int HEALTH_POINT;
 
+    private String FACTION;
+
     public Entity(int id) {this.ID=id;}
 
 
@@ -30,6 +32,7 @@ public class Entity {
     public int getMAP_X() {return MAP_X;}
     public int getMAP_Y() {return MAP_Y;}
     public int getMAP_ANGLE() {return MAP_ANGLE;}
+    public String getFACTION() {return FACTION;}
 
 
     //Setters
@@ -43,6 +46,7 @@ public class Entity {
     public void setMAP_X(int x) {MAP_X = x;}
     public void setMAP_Y(int y) {MAP_Y = y;}
     public void setMAP_ANGLE(int angle) {MAP_ANGLE = angle;}
+    public void setFACTION(String name) {FACTION=name;}
 
 
 
