@@ -1,19 +1,20 @@
 package org.marine.entity;
-import org.marine.inventory.Inventory;
 
-public class Boat {
-    private int ID;
-    private String NAME;
-    private String Type;
-    private String Model;
+public class Boat extends Entity {
 
-    private Inventory inventory;
-
-
-
-    private static int HEALTH_POINT;
     private int SPEED;
     private int DAMAGE;
-    
+
+    public Boat(int id) {
+        super(id);
+    }
+
+    //getters
+    public int getSPEED() {return SPEED;}
+    public int getDAMAGE() {return DAMAGE;}
+
+    //setters
+    public void setSPEED(int speed) {SPEED = speed;}
+    public void setDAMAGE(int damage) {DAMAGE = damage;}
 
 }
