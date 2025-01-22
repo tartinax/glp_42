@@ -1,14 +1,20 @@
 package org.marine.map;
-import java.awt.Point;
-
-import java.util.HashMap;
 
 public class Road {
-    private Point start;
-    private Point end;
-    private HashMap<Integer, Point> ROAD_POINTS;
+    private final Point connected;
+    private int length;
+    private Boolean Pirate;
 
-    public Road() {}
+    public Road(final Point connected, int length) {
+        this.connected = connected;
+        this.length = length;
+    }
+
+    public Point getPoint() {return connected;}
+    public boolean hasPirate() {return Pirate;}
+    public int getLength() {return length;}
+
+    public void setPirate(final boolean pirate) {Pirate = pirate;}
 
 
 }

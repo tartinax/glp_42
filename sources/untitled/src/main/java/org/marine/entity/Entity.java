@@ -1,6 +1,8 @@
 package org.marine.entity;
 import org.marine.inventory.Inventory;
 
+import java.awt.*;
+
 public class Entity {
     private int ID;
     private String NAME;
@@ -8,9 +10,8 @@ public class Entity {
     private String MODEL;
     private Inventory INVENTORY;
 
-    private int MAP_X;
-    private int MAP_Y;
-    private int MAP_ANGLE;
+    private Point MAP_P;
+    private double MAP_ANGLE;
 
     private int VISION_RANGE;
     private static int MAX_HEALTH_POINT;
@@ -29,9 +30,9 @@ public class Entity {
     public Inventory getINVENTORY() {return INVENTORY;}
     public int getVISION_RANGE() {return VISION_RANGE;}
     public int getHEALTH_POINT() {return HEALTH_POINT;}
-    public int getMAP_X() {return MAP_X;}
-    public int getMAP_Y() {return MAP_Y;}
-    public int getMAP_ANGLE() {return MAP_ANGLE;}
+    public double getMAP_X() {return MAP_P.getX();}
+    public double getMAP_Y() {return MAP_P.getY();}
+    public double getMAP_ANGLE() {return MAP_ANGLE;}
     public String getFACTION() {return FACTION;}
 
 
@@ -43,8 +44,7 @@ public class Entity {
     public void setVISION_RANGE(int range) {VISION_RANGE = range;}
     public void setMODEL(String model) {this.MODEL = model;}
     public void setHEALTH_POINT(int point) {HEALTH_POINT = point;}
-    public void setMAP_X(int x) {MAP_X = x;}
-    public void setMAP_Y(int y) {MAP_Y = y;}
+    public void setMAP_LOCATION(int x, int y) {MAP_P.setLocation(x,y);}
     public void setMAP_ANGLE(int angle) {MAP_ANGLE = angle;}
     public void setFACTION(String name) {FACTION=name;}
 
