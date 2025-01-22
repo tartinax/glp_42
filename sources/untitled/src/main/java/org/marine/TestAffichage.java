@@ -56,9 +56,11 @@ public class TestAffichage extends JPanel {
         System.out.println(map.getPoints());
         for( org.marine.map.Point p : map.getPoints()){
             g.fillOval( (int) p.getX(), (int) p.getY(), 50, 50);
+
             for(Road r: p.getRoads().values()){
                 g.drawLine((int) p.getX()+25,(int) p.getY()+25, r.getPoint().x+25, r.getPoint().y+25);
                 System.out.println(""+r.getPoint().x+" "+r.getPoint().y);
+                continue;
             }
         }
 
