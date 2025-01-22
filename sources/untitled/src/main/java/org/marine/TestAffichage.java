@@ -12,6 +12,7 @@ import java.awt.image.ImageObserver;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.util.Random;
 
 public class TestAffichage extends JPanel {
     private Map map;
@@ -21,7 +22,7 @@ public class TestAffichage extends JPanel {
         org.marine.map.Point B = new org.marine.map.Point(1,"Port",800,600);
         org.marine.map.Point C = new org.marine.map.Point(2,"Port",800,0);
         org.marine.map.Point D = new org.marine.map.Point(3,"Port",0,600);
-        org.marine.map.Point E = new org.marine.map.Point(4,"Port",400,300);
+        org.marine.map.Point E = new org.marine.map.Point(4,"Port",600,300);
         org.marine.map.Point F = new org.marine.map.Point(5,"Port",100,200);
         org.marine.map.Point G = new org.marine.map.Point(6,"Port",500,100);
 
@@ -44,7 +45,12 @@ public class TestAffichage extends JPanel {
         C.addRoad(0,new Road(E,1));
 
         D.addRoad(1,new Road(A,1));
+
+
         E.addRoad(2,new Road(D,1));
+
+
+
 
         repaint();
     }
@@ -52,15 +58,11 @@ public class TestAffichage extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);  // Appelle la méthode de la classe parente
-        g.setColor(Color.RED);
-        System.out.println(map.getPoints());
         for( org.marine.map.Point p : map.getPoints()){
+            g.setColor(new Color(new Random().nextInt(255),new Random().nextInt(255),new Random().nextInt(255)));
             g.fillOval( (int) p.getX(), (int) p.getY(), 50, 50);
-
             for(Road r: p.getRoads().values()){
                 g.drawLine((int) p.getX()+25,(int) p.getY()+25, r.getPoint().x+25, r.getPoint().y+25);
-                System.out.println(""+r.getPoint().x+" "+r.getPoint().y);
-                continue;
             }
         }
 
@@ -70,7 +72,7 @@ public class TestAffichage extends JPanel {
         // Créer la fenêtre principale
         JFrame frame = new JFrame("Screen");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
+        frame.setSize(1000, 800);
 
         // Créer un panneau personnalisé et l'ajouter à la fenêtre
         TestAffichage panneau = new TestAffichage();
