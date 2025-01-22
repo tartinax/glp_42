@@ -34,17 +34,17 @@ public class TestAffichage extends JPanel {
         map.addPoint(G);
 
         A.addRoad(0,new Road(B,1));
-        A.addRoad(0,new Road(C,1));
-        A.addRoad(0,new Road(D,1));
-        A.addRoad(0,new Road(E,1));
+        A.addRoad(1,new Road(C,1));
+        A.addRoad(2,new Road(D,1));
+        A.addRoad(3,new Road(E,1));
 
         B.addRoad(0,new Road(F,1));
-        B.addRoad(0,new Road(G,1));
+        B.addRoad(1,new Road(G,1));
 
         C.addRoad(0,new Road(E,1));
 
-        D.addRoad(0,new Road(A,1));
-        E.addRoad(0,new Road(D,1));
+        D.addRoad(1,new Road(A,1));
+        E.addRoad(2,new Road(D,1));
 
         repaint();
     }
