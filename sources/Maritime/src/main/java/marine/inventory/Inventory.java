@@ -1,8 +1,8 @@
-package org.marine.inventory;
+package marine.inventory;
 import java.util.HashMap;
 
 public class Inventory {
-    private HashMap<String, Integer> dictionnary;
+    private final HashMap<String, Integer> dictionnary;
 
 
     public Inventory() {dictionnary = new HashMap<String,Integer>();}

@@ -1,4 +1,4 @@
-package org.marine.game;
+package marine.game;
 
 public class Player {
 }
