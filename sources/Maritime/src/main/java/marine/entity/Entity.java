@@ -1,5 +1,5 @@
-package org.marine.entity;
-import org.marine.inventory.Inventory;
+package marine.entity;
+import marine.inventory.Inventory;
 
 import java.awt.*;
 
@@ -14,8 +14,8 @@ public class Entity {
     private double MAP_ANGLE;
 
     private int VISION_RANGE;
-    private static int MAX_HEALTH_POINT;
-    private  int HEALTH_POINT;
+    private int MAX_HEALTH_POINT;
+    private int HEALTH_POINT;
 
     private String FACTION;
 

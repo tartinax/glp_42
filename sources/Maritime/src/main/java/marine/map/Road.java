@@ -1,8 +1,8 @@
-package org.marine.map;
+package marine.map;
 
 public class Road {
     private final Point connected;
-    private int length;
+    private final int length;
     private Boolean Pirate;
 
     public Road(final Point connected, int length) {

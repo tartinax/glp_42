@@ -1,10 +1,13 @@
-package org.marine.map;
+package marine.map;
 import java.util.HashMap;
 
 public class Point extends java.awt.Point {
     private String Name;
+
     private Boolean Harbor;
+
     private int ID;
+
     HashMap<Integer,Road> roads;
 
     public Point(int Id,String NAME,int x, int y) {

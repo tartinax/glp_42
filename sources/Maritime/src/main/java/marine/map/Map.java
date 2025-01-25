@@ -1,4 +1,4 @@
-package org.marine.map;
+package marine.map;
 import java.util.ArrayList;
 
 public class Map {

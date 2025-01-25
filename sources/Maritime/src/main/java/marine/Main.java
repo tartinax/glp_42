@@ -1,10 +1,9 @@
-package org.marine;
+package marine;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.image.ImageObserver;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -12,7 +11,8 @@ import java.io.File;
 public class Main extends JPanel {
 
     private Image backgroundImage;  // Image de fond (ex. terrain)
-    private int cercleX = 100, cercleY = 100;  // Position du cercle
+    private final int cercleX = 100;
+    private final int cercleY = 100;  // Position du cercle
     private final int CERCLE_DIAMETER = 50;  // Diamètre du cercle
     private int cameraX = 0, cameraY = 0;  // Position de la caméra
 

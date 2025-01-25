@@ -1,4 +1,4 @@
-package org.marine.graphics;
+package marine.graphics;
 
 public class Camera {
     private int WIDTH, HEIGHT;

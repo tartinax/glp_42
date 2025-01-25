@@ -1,4 +1,4 @@
-package org.marine.entity;
+package marine.entity;
 
 public class Boat extends Entity {
 
